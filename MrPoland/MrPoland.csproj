@@ -220,6 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\CompleteCameraController.cs" />
+    <Compile Include="Assets\Code\CompletePlayerController.cs" />
     <Compile Include="Assets\Code\PlayerController.cs" />
     <Compile Include="Assets\FollowCamera.cs" />
   </ItemGroup>
