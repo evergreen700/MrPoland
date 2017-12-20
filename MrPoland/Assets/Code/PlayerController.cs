@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed = 5f;
     public float jumpForce = 1000f;
     public Transform groundCheck;
-
+    public bool isGrounded = true;
+    public Vector3 jumpv;
 
     private bool grounded = false;
     private Animator anim;
     private Rigidbody2D rb2d;
+    
 
 
     // Use this for initialization
@@ -22,17 +24,24 @@ public class PlayerController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
-    }
 
+    }
+    private void Start()
+    {
+        jumpv = new Vector3(0.0f, 27.0f, 0.0f);
+    }
+    void OnCollisionStay2D()
+    {
+        isGrounded = true;
+    }
     // Update is called once per frame
     void Update()
     {
-        grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-
-        if (Input.GetButtonDown("Jump") && grounded)
-        {
-            jump = true;
-        }
+          if (Input.GetKeyDown("space") && isGrounded)
+          {
+            rb2d.AddForce(jumpv, ForceMode2D.Impulse);
+            isGrounded = false;
+          }
     }
 
     void FixedUpdate()
