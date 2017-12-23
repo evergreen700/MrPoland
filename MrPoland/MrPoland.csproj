@@ -301,6 +301,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Animation\animation.cs" />
+    <Compile Include="Assets\Code\doorLogic.cs" />
     <Compile Include="Assets\Code\FollowCamera.cs" />
     <Compile Include="Assets\Code\PlayerController.cs" />
   </ItemGroup>
