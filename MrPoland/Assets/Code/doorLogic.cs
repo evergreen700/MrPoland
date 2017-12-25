@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class doorLogic : MonoBehaviour {
     GameObject door;
-    GameObject opendoor;
+    public bool open;
+
 	// Use this for initialization
 	void Start () {
-		
-	}
+        door = this.gameObject;
+
+        open = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D()
     {
-        door.SetActive(false);
-        opendoor.SetActive(true);
+
+        GameObject.Destroy(door);
+        open = true;
+
     }
 }
