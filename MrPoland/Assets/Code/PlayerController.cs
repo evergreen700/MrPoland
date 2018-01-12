@@ -57,10 +57,20 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = new Vector2(Mathf.Sign(rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);
 
         if (h > 0 && !facingRight)
+        {
             Flip();
-        else if (h < 0 && facingRight)
+        }
+        else if (h < 0 && facingRight) { 
             Flip();
-
+        }
+        if(h != 0)
+        {
+            anim.SetTrigger("isMoving");
+        }
+        if(h == 0)
+        {
+            anim.SetTrigger("isStill");
+        }
         if (Input.GetKeyDown("space") && isGrounded)
         {
             rb2d.AddForce(jumpv, ForceMode2D.Impulse);
