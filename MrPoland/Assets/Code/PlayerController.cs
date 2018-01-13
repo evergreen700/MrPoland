@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
             rb2d.AddForce(jumpv, ForceMode2D.Impulse);
             isGrounded = false;
         }
+       
     }
 
     void Flip()
