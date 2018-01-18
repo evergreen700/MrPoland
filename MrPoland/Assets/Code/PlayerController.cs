@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public bool isGrounded = false;
     public Vector3 jumpv;
-
+    Vector3 position;
+    public float xval;
+    public float yval;
 
     private Animator anim;
     private Rigidbody2D rb2d;
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         jumpv = new Vector3(0.0f, 80.0f, 0.0f);
+        position = new Vector3(0.0f, 0.0f, 0.0f);
     }
     void OnCollisionStay2D()
     {
@@ -76,7 +79,9 @@ public class PlayerController : MonoBehaviour
             rb2d.AddForce(jumpv, ForceMode2D.Impulse);
             isGrounded = false;
         }
-       
+        position = transform.position;
+        xval = position.x;
+        yval = position.y;
     }
 
     void Flip()

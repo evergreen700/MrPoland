@@ -7,6 +7,7 @@ TagManager:
   - ground
   - door
   - opendoor
+  - gun
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 1958303957
+    locked: 0
+  - name: gun
+    uniqueID: 1974459553
     locked: 0
