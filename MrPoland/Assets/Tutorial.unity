@@ -1319,8 +1319,8 @@ GameObject:
   - component: {fileID: 436838645}
   - component: {fileID: 436838644}
   - component: {fileID: 436838647}
-  m_Layer: 0
-  m_Name: GameObject
+  m_Layer: 2
+  m_Name: Gun
   m_TagString: gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1413,9 +1413,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1496251881}
   gun: {fileID: 436838643}
-  mouse_pos: {x: 0, y: 0, z: 0}
-  object_pos: {x: 0, y: 0, z: 0}
-  angle: 0
+  firePoint: {fileID: 0}
+  speed: 5
+  fireRate: 0
+  damage: 10
+  notToHit:
+    serializedVersion: 2
+    m_Bits: 4
 --- !u!1 &454526938
 GameObject:
   m_ObjectHideFlags: 0
@@ -7429,7 +7433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2001348131}
   - component: {fileID: 2001348130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
