@@ -1413,13 +1413,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1496251881}
   gun: {fileID: 436838643}
-  firePoint: {fileID: 0}
   speed: 5
   fireRate: 0
   damage: 10
   notToHit:
     serializedVersion: 2
-    m_Bits: 4
+    m_Bits: 0
 --- !u!1 &454526938
 GameObject:
   m_ObjectHideFlags: 0

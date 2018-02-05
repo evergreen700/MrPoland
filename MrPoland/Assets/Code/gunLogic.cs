@@ -47,6 +47,7 @@ public class gunLogic : MonoBehaviour {
         Vector2 mousePosition = new Vector2 (Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 fire = new Vector2(gun.transform.position.x, gun.transform.position.y);
         RaycastHit2D hit = Physics2D.Raycast(fire, mousePosition - fire, 100, notToHit);
+        Debug.DrawLine(gun.transform.position, (mousePosition - fire) * 100, Color.cyan);
     }
     void mouseControl()
     {
